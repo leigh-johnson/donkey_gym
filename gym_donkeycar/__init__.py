@@ -5,6 +5,3 @@
 __author__ = """Leigh Johnson"""
 __email__ = 'leigh@data-literate.com'
 __version__ = '1.0.0'
-
-from .core import *
-from .envs import *

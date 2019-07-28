@@ -3,7 +3,7 @@
 
 from setuptools import setup, find_packages
 
-version = '1.0.0'
+from gym_donkeycar import __version__
 
 """The setup script."""
 
@@ -59,6 +59,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/leigh-johnson/gym_donkeycar',
-    version=version,
+    version=__version__,
     zip_safe=False,
 )

@@ -16,33 +16,33 @@ OpenAI Gym for Donkey Car (https://www.donkeycar.com/)
 
 
 
-OpenAI Gym for Donkey Car (https://www.donkeycar.com/)
+.. OpenAI Gym for Donkey Car (https://www.donkeycar.com/)
 
 
-* Free software: MIT license
-* Documentation: https://gym-donkeycar.readthedocs.io.
+.. * Free software: MIT license
+.. * Documentation: https://gym-donkeycar.readthedocs.io.
 
-Installation
---------
+.. Installation
+.. --------
 
-`pip install gym-donkeycar`
+.. `pip install gym-donkeycar`
 
 
-Example Usage
---------
+.. Example Usage
+.. --------
 
-```python
-import gym
+.. ```python
+.. import gym
 
-env = gym.make("donkey-generated-track-v0)
-```
-Environments
---------
+.. env = gym.make("donkey-generated-track-v0)
+.. ```
+.. Environments
+.. --------
 
-* `"donkey-warehouse-v0"`
-* `"donkey-generated-roads-v0"`
-* `"donkey-avc-sparkfun-v0"`
-* `"donkey-generated-track-v0"`
+.. * `"donkey-warehouse-v0"`
+.. * `"donkey-generated-roads-v0"`
+.. * `"donkey-avc-sparkfun-v0"`
+.. * `"donkey-generated-track-v0"`
 
 
 Credits

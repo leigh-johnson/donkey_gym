@@ -5,7 +5,7 @@
 
 import pytest
 
-from gym_donkeycar.core import FPSTimer
+from gym_donkeycar.core.fps import FPSTimer
 
 
 # @pytest.fixture
@@ -25,7 +25,6 @@ def test_fps():
     """
 
     timer = FPSTimer()
-    init_t = time.t
 
     assert timer.iter == 0
 

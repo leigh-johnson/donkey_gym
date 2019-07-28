@@ -122,7 +122,7 @@ class DonkeyUnitySimHandler(IMesgHandler):
         if msg_type in self.fns:
             self.fns[msg_type](message)
         else:
-            logger.warning(f 'unknown message type {msg_type}')
+            logger.warning(f'unknown message type {msg_type}')
 
     ## ------- Env interface ---------- ##
 

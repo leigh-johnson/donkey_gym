@@ -24,16 +24,15 @@ def test_fps():
     it should reset t and iter
     """
 
-     timer = FPSTimer()
-     init_t = time.t
-
-     assert timer.iter == 0
-     
-     timer.on_frame()
-
-     assert timer.iter == 1
-
-     timer.reset()
+    timer = FPSTimer()
+    init_t = time.t
 
     assert timer.iter == 0
 
+    timer.on_frame()
+
+    assert timer.iter == 1
+
+    timer.reset()
+
+    assert timer.iter == 0

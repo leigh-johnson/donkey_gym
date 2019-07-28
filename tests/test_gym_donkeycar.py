@@ -6,9 +6,6 @@
 import pytest
 
 
-from gym_donkeycar import gym_donkeycar
-
-
 @pytest.fixture
 def response():
     """Sample pytest fixture.

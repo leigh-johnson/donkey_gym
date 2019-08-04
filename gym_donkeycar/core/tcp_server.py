@@ -5,7 +5,6 @@ file: tcp_server.py
 notes: a tcp socket server to talk to the unity donkey simulator
 '''
 import json
-import time
 import re
 import asyncore
 import socket
@@ -60,7 +59,8 @@ class SimServer(asyncore.dispatcher):
         # create a TCP socket to listen for connections
         self.create_socket(socket.AF_INET, socket.SOCK_STREAM)
 
-        # in case we have shutdown recently, allow the os to reuse this address. helps when restarting
+        # in case we have shutdown recently, allow the os to reuse this address.
+        # helps when restarting
         self.set_reuse_addr()
 
         # let TCP stack know that we'd like to sit on this address and listen for connections
@@ -99,7 +99,7 @@ class SimHandler(asyncore.dispatcher):
       Handles messages from a single TCP client.
     """
 
-    def __init__(self, sock, chunk_size=(16*1024), msg_handler=None):
+    def __init__(self, sock, chunk_size=(16 * 1024), msg_handler=None):
         # we call our base class init
         asyncore.dispatcher.__init__(self, sock=sock)
 

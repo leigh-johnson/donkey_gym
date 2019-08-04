@@ -9,6 +9,8 @@ from io import BytesIO
 import math
 import logging
 from threading import Thread
+import asyncore
+import base64
 
 import numpy as np
 from PIL import Image
@@ -30,10 +32,9 @@ class DonkeyUnitySimContoller():
         self.address = (hostname, port)
 
         self.handler = DonkeyUnitySimHandler(
-            level, time_step=time_step, max_cte=max_cte, cam_resolution=cam_resolution)
+            level, time_step=time_step, max_cte=max_cte,
+            cam_resolution=cam_resolution)
 
-        import pdb
-        pdb.set_trace()
         try:
             self.server = SimServer(self.address, self.handler)
         except OSError:
@@ -107,7 +108,7 @@ class DonkeyUnitySimHandler(IMesgHandler):
         self.sock = None
 
     def on_recv_message(self, message):
-        if not 'msg_type' in message:
+        if 'msg_type' not in message:
             logger.error('expected msg_type field')
             return
 

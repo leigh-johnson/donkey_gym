@@ -7,6 +7,7 @@ date: 2018-08-31
 import time
 from io import BytesIO
 import math
+import logging
 from threading import Thread
 
 import numpy as np
